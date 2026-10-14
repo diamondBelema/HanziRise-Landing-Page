@@ -156,9 +156,10 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
 .show-num{position:relative;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
 
 /* screenshots gallery — centered row on desktop, swipe side-to-side on small screens */
-.shots{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(220px,72vw,272px);gap:clamp(18px,4vw,40px);justify-content:center;align-items:start;margin-top:clamp(20px,4vw,36px);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:6px 2px 8px}
+.shots{overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-top:clamp(20px,4vw,36px);padding:6px 2px 8px}
 .shots::-webkit-scrollbar{display:none}
-.shot-frame{display:flex;flex-direction:column;gap:16px;align-items:center;margin:0;scroll-snap-align:center}
+.shots-track{display:flex;gap:clamp(18px,4vw,40px);width:max-content;margin-inline:auto}
+.shot-frame{flex:0 0 clamp(220px,72vw,272px);display:flex;flex-direction:column;gap:16px;align-items:center;margin:0;scroll-snap-align:center}
 .shot-frame img{width:100%;height:auto;display:block;aspect-ratio:720/1568;object-fit:cover;border-radius:30px;border:8px solid var(--ink);background:#fff;box-shadow:var(--shadow-lg)}
 .shot-frame figcaption{font-weight:800;color:var(--muted);font-size:15px;letter-spacing:.01em}
 @media(max-width:760px){
@@ -405,6 +406,7 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
     <p class="section-sub">Your day, your reviews and your reading — all built around the words you're actually learning, right now.</p>
   </div>
   <div class="shots">
+    <div class="shots-track">
     <figure class="shot-frame reveal">
       <img src="assets/shot-home.webp" alt="Hanzi Rise home screen with today's progress and HSK mastery overview" width="720" height="1568" loading="lazy" decoding="async">
       <figcaption>Today's session</figcaption>
@@ -417,6 +419,7 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
       <img src="assets/shot-library.webp" alt="Hanzi Rise library with 1096 characters and 2000 words to browse" width="720" height="1568" loading="lazy" decoding="async">
       <figcaption>Library</figcaption>
     </figure>
+    </div>
   </div>
 </div>
 
