@@ -5,10 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hanzi Rise — Learn Chinese you actually remember</title>
 <meta name="description" content="Hanzi Rise: spaced repetition, stories at your level, grammar, games and writing practice for HSK 1–4. Free forever, works offline.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://diamondbelema.github.io/HanziRise-Landing-Page/">
+<meta name="theme-color" content="#FF9440">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hanzi Rise">
+<meta property="og:title" content="Hanzi Rise — Learn Chinese you actually remember">
+<meta property="og:description" content="Spaced repetition, stories at your level, grammar, games and writing practice for HSK 1–4. Free forever, works offline.">
+<meta property="og:url" content="https://diamondbelema.github.io/HanziRise-Landing-Page/">
+<meta property="og:image" content="https://diamondbelema.github.io/HanziRise-Landing-Page/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hanzi Rise — Learn Chinese you actually remember">
+<meta name="twitter:description" content="Spaced repetition, stories at your level, grammar, games and writing practice for HSK 1–4. Free forever, works offline.">
+<meta name="twitter:image" content="https://diamondbelema.github.io/HanziRise-Landing-Page/assets/og-image.png">
+
+<link rel="preload" href="assets/manrope_bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/manrope_regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/notosc_bold.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hanzi Rise","applicationCategory":"EducationalApplication","operatingSystem":"Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Spaced repetition, stories at your level, grammar, games and writing practice for HSK 1–4. Free forever, works offline.","url":"https://diamondbelema.github.io/HanziRise-Landing-Page/"}</script>
 <style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(assets/manrope_regular.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(assets/manrope_medium.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(assets/manrope_bold.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(assets/manrope_bold.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:500;font-display:swap;src:url(assets/notosc_regular.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:700;font-display:swap;src:url(assets/notosc_bold.woff2) format('woff2')}
 :root{
   --ink:#141C4A;
   --ink-soft:#1d2757;
@@ -37,7 +63,8 @@ img{display:block}
 .nav.scrolled{border-color:var(--line);box-shadow:0 8px 30px -18px rgba(20,28,74,.25)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1120px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:-.01em}
-.brand-mark{width:42px;height:42px;border-radius:12px;background:var(--ink);display:grid;place-items:center;color:#fff;font-family:'Noto Sans SC',sans-serif;font-weight:700;font-size:22px;box-shadow:0 6px 16px -6px rgba(20,28,74,.5);transform:rotate(-4deg);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.brand-mark{width:42px;height:42px;border-radius:12px;background:var(--ink);display:grid;place-items:center;color:#fff;font-family:'Noto Sans SC',sans-serif;font-weight:700;font-size:22px;overflow:hidden;box-shadow:0 6px 16px -6px rgba(20,28,74,.5);transform:rotate(-4deg);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.brand-mark img{width:100%;height:100%;object-fit:cover}
 .brand:hover .brand-mark{transform:rotate(4deg) scale(1.06)}
 .nav-links{display:flex;align-items:center;gap:28px;font-weight:600;font-size:15px}
 .nav-links a{color:var(--muted);transition:color .2s;position:relative}
@@ -75,16 +102,9 @@ h1 .hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:6px;heigh
 .blob{position:absolute;bottom:-230px;left:50%;margin-left:-260px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #ffb26b, var(--accent) 65%);filter:saturate(1.05)}
 .glyph{position:absolute;font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--ink);opacity:.09;user-select:none;animation:float 9s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-22px) rotate(5deg)}}
-.phone{position:relative;width:280px;height:500px;background:#fff;border:8px solid var(--ink);border-bottom:none;border-radius:36px 36px 0 0;padding:20px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow-lg);animation:float 7s ease-in-out infinite}
-.phone .bar{height:8px;border-radius:4px;background:#F0E3D0;overflow:hidden}
-.phone .bar i{display:block;width:40%;height:100%;border-radius:4px;background:var(--accent)}
-.phone .step{font-size:13px;color:var(--muted);font-weight:600}
-.phone .char{background:#FFF3E2;border-radius:20px;padding:18px 12px;text-align:center;font-family:'Noto Sans SC',sans-serif;font-weight:700;font-size:56px;line-height:1.2}
-.phone .opt{border-radius:12px;padding:12px;font:700 15px Manrope,sans-serif;text-align:left;transition:transform .15s}
-.phone .opt:hover{transform:translateX(3px)}
-.phone .opt.correct{background:var(--peach);color:var(--ink);border:2px solid var(--ink)}
-.phone .opt.wrong{background:#fff;color:var(--ink);border:1px solid #D9CDBA}
-.phone .speak{align-self:center;width:44px;height:44px;border-radius:50%;border:none;background:var(--ink);color:#fff;display:grid;place-items:center}
+.phone{position:relative;width:280px;height:500px;background:var(--ink);border-radius:42px;padding:9px;box-shadow:var(--shadow-lg);animation:float 7s ease-in-out infinite}
+.phone::after{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:92px;height:20px;background:var(--ink);border-radius:0 0 14px 14px;z-index:2}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:34px;display:block;background:#fff}
 
 /* ---------- MARQUEE ---------- */
 .marquee{background:var(--ink);color:#fff;overflow:hidden;padding:14px 0;border-top:1px solid rgba(255,255,255,.06)}
@@ -130,6 +150,12 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
 .show-card p{font-size:16px;line-height:1.55;opacity:.9;max-width:420px;position:relative}
 .show-glyph{position:absolute;top:-30px;right:-14px;font-family:'Noto Sans SC',sans-serif;font-weight:700;font-size:190px;line-height:1;opacity:.13;user-select:none;transform:rotate(8deg)}
 .show-num{position:relative;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+
+/* screenshots gallery */
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-top:12px;align-items:start}
+.shot-frame{display:flex;flex-direction:column;gap:16px;align-items:center;margin:0}
+.shot-frame img{width:100%;max-width:250px;border-radius:30px;border:7px solid var(--ink);background:var(--ink);box-shadow:var(--shadow-lg);display:block}
+.shot-frame figcaption{font-weight:800;color:var(--muted);font-size:15px}
 
 /* ---------- TESTER FORM ---------- */
 .tester{background:var(--ink);margin-top:96px;position:relative;overflow:hidden}
@@ -186,14 +212,13 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
   .show-card{padding:28px}
 }
 </style>
-<base target="_blank">
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="brand-mark">汉</span>Hanzi Rise</a>
+    <a href="#top" class="brand"><span class="brand-mark"><img src="assets/icon-192.png" alt="Hanzi Rise app icon"></span>Hanzi Rise</a>
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#roadmap">Roadmap</a>
@@ -211,8 +236,8 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
     <p class="hero-sub">Words and characters come back right before you forget them, then you read them in short stories built from what you already know.</p>
     <div class="hero-cta">
       <a href="#get" class="btn btn-ink">Get the Android app</a>
-      <a href="https://diamondbelema.github.io/HanziRise/" class="btn btn-accent">Try on the web</a>
-      <a href="#how" class="btn btn-ghost">See how it works</a>
+      <a href="https://diamondbelema.github.io/HanziRise/" target="_blank" rel="noopener" class="btn btn-accent">Try on the web</a>
+      <a href="#screens" class="btn btn-ghost">See how it works</a>
     </div>
     <div class="hero-meta">
       <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No ads</span>
@@ -228,13 +253,7 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
     <span class="glyph" style="bottom:30%;left:8%;font-size:60px;animation-delay:3.4s">爱</span>
     <div class="blob"></div>
     <div class="phone">
-      <div class="bar"><i></i></div>
-      <div class="step">Step 8 of 20</div>
-      <div class="char">你好</div>
-      <button class="opt correct" type="button">hello</button>
-      <button class="opt wrong" type="button">thank you</button>
-      <button class="opt wrong" type="button">goodbye</button>
-      <button class="speak" type="button" aria-label="Play audio"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg></button>
+      <img src="assets/shot-home.webp" alt="Hanzi Rise home screen showing today's session, streak and new words" width="262" height="482">
     </div>
   </div>
 </header>
@@ -341,6 +360,29 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
   </div>
 </div>
 
+<!-- SCREENSHOTS -->
+<div class="section" id="screens">
+  <div class="reveal">
+    <span class="eyebrow">A look inside</span>
+    <h2>See it in action</h2>
+    <p class="section-sub">Your day, your reviews and your reading — all built around the words you're actually learning, right now.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot-frame reveal">
+      <img src="assets/shot-home.webp" alt="Hanzi Rise home screen with daily progress and HSK mastery overview" width="720" height="1640" loading="lazy">
+      <figcaption>Home</figcaption>
+    </figure>
+    <figure class="shot-frame reveal">
+      <img src="assets/shot-session.webp" alt="Hanzi Rise today's session with due reviews, new words and targeted practice" width="720" height="1640" loading="lazy">
+      <figcaption>Today's session</figcaption>
+    </figure>
+    <figure class="shot-frame reveal">
+      <img src="assets/shot-review.webp" alt="Hanzi Rise review card grading the meaning of a character" width="720" height="1640" loading="lazy">
+      <figcaption>Review</figcaption>
+    </figure>
+  </div>
+</div>
+
 <!-- ROADMAP (from Coming next) -->
 <div class="section" id="roadmap">
   <div class="reveal">
@@ -404,8 +446,8 @@ h2{margin:0 0 12px;font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing
     <h2>Start your first unit today.</h2>
     <p>Free forever. No ads, no subscriptions.</p>
     <div class="cta-row">
-      <a href="https://github.com/diamondBelema/HanziRise-Landing-Page/releases/download/v1.0.0/HanziRise-v1.0.0.apk" class="btn btn-ink">Download the Android app</a>
-      <a href="https://diamondbelema.github.io/HanziRise/" class="btn btn-white">Try it on the web</a>
+      <a href="https://github.com/diamondBelema/HanziRise/releases/download/v1.3.0/HanziRise-v1.3.0.apk" class="btn btn-ink">Download the Android app</a>
+      <a href="https://diamondbelema.github.io/HanziRise/" target="_blank" rel="noopener" class="btn btn-white">Try it on the web</a>
     </div>
     <p style="font-size:15px;font-weight:700;opacity:.85">Coming soon on Google Play</p>
   </div>
